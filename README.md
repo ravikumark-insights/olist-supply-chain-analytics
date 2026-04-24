@@ -5,148 +5,151 @@
 
 ## 📌 Executive Summary
 
-This project presents an end-to-end analysis of an e-commerce supply chain using the Olist dataset, with a focus on delivery performance, operational efficiency, and customer experience.
+This project delivers an end-to-end analysis of an e-commerce supply chain using the Olist dataset, focusing on delivery performance, operational efficiency, and customer experience.
 
-The objective was to move beyond descriptive reporting and build a structured, decision-oriented analytical framework that identifies delivery inefficiencies, quantifies their impact, and translates findings into actionable business recommendations.
+The goal was to move beyond descriptive reporting and build a structured, decision-support framework that identifies inefficiencies, quantifies their impact, and translates insights into actionable business decisions.
 
-The final solution integrates SQL-based data modeling, Python-driven analysis, and a Power BI dashboard to enable continuous performance monitoring and data-driven decision-making.
+The solution integrates SQL-based data transformation, Python-driven analysis, and a Power BI dashboard to enable continuous monitoring and data-driven decision-making.
 
 ---
 
 ## 🧩 Business Problem
 
-In e-commerce operations, delivery performance is a critical driver of customer satisfaction and repeat purchase behavior. However, organizations often lack clear visibility into:
+Delivery performance is a critical driver of customer satisfaction in e-commerce. However, organizations often lack visibility into:
 
-- Where delays are occurring in the fulfillment lifecycle  
+- Where delays occur in the fulfillment lifecycle  
 - How delivery performance varies across regions  
-- What factors contribute most to late deliveries  
+- What drives late deliveries  
 - How to prioritize operational improvements  
 
-This results in reactive decision-making and inefficient allocation of resources.
+This leads to reactive decision-making and inefficient resource allocation.
 
 ---
 
 ## 🎯 Objective
 
-The goal of this project is to establish a data-driven framework to:
-
 - Measure delivery performance using standardized KPIs  
 - Identify and quantify delivery delays  
 - Analyze regional and temporal performance variation  
-- Detect operational bottlenecks across the fulfillment lifecycle  
-- Provide actionable recommendations to improve delivery efficiency  
+- Detect operational bottlenecks  
+- Enable data-driven improvements in delivery efficiency  
 
 ---
 
-## 📊 Data & Scope
+## 🔄 Supply Chain Flow (Scope)
 
-The analysis is based on the Olist e-commerce dataset, which includes:
+The analysis covers the **order-to-delivery lifecycle**:
 
-- Orders and delivery timestamps  
-- Customer and seller location data  
-- Order items and transaction details  
-
-The scope focuses on the **order-to-delivery lifecycle**, including:
-
-- Order purchase → Approval → Shipment → Delivery  
+**Order Purchase → Order Approval → Shipment → Delivery**
 
 ---
 
-## ⚙️ Analytical Framework
+## 📊 Data & Modeling
 
-### 1. Data Preparation & Modeling
-- Integrated multiple datasets into a unified analytical layer  
-- Standardized timestamp fields  
-- Engineered key variables:
+The project uses the Olist dataset, including:
+
+- Orders and timestamps  
+- Customers and locations  
+- Sellers and fulfillment data  
+- Order items and payments  
+
+### Data Preparation
+
+- Merged datasets into a unified analytical model  
+- Standardized timestamps  
+- Created derived metrics:
   - Delivery Time  
-  - Delay Duration  
-  - On-Time vs Delayed Classification  
+  - Delay Days  
+  - Delivery Status (On-Time / Delayed)  
 
 ---
 
-### 2. KPI Definition
-Key performance indicators include:
+## 📏 KPI Definitions
 
-- **On-Time Delivery Rate (OTD%)**  
+- **On-Time Delivery (OTD%)**  
+  = Orders delivered on or before estimated date / Total orders  
+
 - **Delay Rate (%)**  
-- **Average Delivery Time (days)**  
-- **Average Delay Duration (days)**  
-- **Order Volume by Region and Time**  
+  = Delayed orders / Total orders  
+
+- **Average Delivery Time**  
+  = Avg(Delivery Date - Purchase Date)  
+
+- **Average Delay Duration**  
+  = Avg(Delay Days for delayed orders)  
 
 ---
+
+## ⚙️ Analytical Approach
+
+### 1. Data Transformation (SQL)
+- Aggregated order-level performance  
+- Calculated KPIs  
+- Identified high-delay regions  
+
+### 2. Exploratory Analysis (Python)
+- Data cleaning and validation  
+- Trend analysis  
+- Pattern identification  
 
 ### 3. Performance Analysis
-Analysis focused on:
+- Regional delivery variation  
+- Monthly trends  
+- Delay severity  
 
-- Regional performance variation  
-- Monthly delivery trends  
-- Delay distribution and severity  
-- High-impact segments contributing to delays  
-
----
-
-### 4. Root Cause Exploration
-- Identified whether delays originate from processing vs transportation  
-- Evaluated geographic concentration of inefficiencies  
-- Analyzed structural delay patterns  
-
----
+### 4. Root Cause Analysis
+- Identified fulfillment vs transportation delays  
+- Detected geographic bottlenecks  
 
 ### 5. 📈 Visualization & Decision Layer
-A Power BI dashboard was developed to:
-
-- Provide visibility into delivery KPIs  
-- Compare performance across regions and time  
-- Highlight high-risk areas  
-- Support operational and strategic decisions  
+Power BI dashboard built to:
+- Track KPIs  
+- Compare regions  
+- Monitor trends  
+- Highlight performance gaps  
 
 ---
 
 ## 🔍 Key Insights
 
-### 1. Regional Inefficiencies Drive Delivery Variability
-Delivery performance varies significantly across regions.
+### 1. Regional Inefficiencies
+Some regions consistently show higher delays.
 
-**Recommendation:**  
-Prioritize improvements in high-delay regions.
-
----
-
-### 2. Delivery Delays Follow Structural Patterns
-Delays are predictable based on time and geography.
-
-**Recommendation:**  
-Implement monitoring systems and proactive controls.
+**Action:** Optimize routing and logistics capacity  
 
 ---
 
-### 3. Bottlenecks Exist Across Multiple Stages
-Delays occur in both processing and transportation stages.
+### 2. Predictable Delay Patterns
+Delays follow identifiable trends.
 
-**Recommendation:**  
-Segment the fulfillment lifecycle to identify root causes.
+**Action:** Implement proactive monitoring  
+
+---
+
+### 3. Multi-Stage Bottlenecks
+Delays occur in both processing and delivery stages.
+
+**Action:** Analyze lifecycle stages separately  
 
 ---
 
 ## 💼 Business Impact
 
-This project enables:
-
-- **Improved Operational Visibility**  
-- **Data-Driven Decision Making**  
-- **Targeted Performance Optimization**  
-- **Enhanced Customer Experience**  
+- 📊 Improved visibility into delivery performance  
+- 📈 Data-driven decision-making  
+- ⚙️ Targeted operational improvements  
+- 😊 Better customer experience  
 
 ---
 
 ## 📊 Dashboard
 
-The Power BI dashboard provides:
+Power BI dashboard includes:
 
-- KPI tracking (OTD%, delay rate, delivery time)  
-- Regional performance comparison  
-- Trend analysis  
-- Identification of performance gaps  
+- OTD% tracking  
+- Delay rate  
+- Delivery time trends  
+- Regional performance  
 
 ---
 
@@ -161,13 +164,50 @@ The Power BI dashboard provides:
 
 ## 🚀 Skills Demonstrated
 
-- Data Modeling & Transformation  
+- Data Modeling  
 - KPI Development  
 - Supply Chain Analytics  
 - Root Cause Analysis  
 - Data Visualization  
-- Business Insight Generation  
+- Business Insights  
 
 ---
 
 ## 📁 Repository Structure
+
+```text
+olist-supply-chain-analytics/
+│
+├── data/
+│   └── README.md                          # Dataset source (Olist - Kaggle)
+│
+├── notebooks/
+│   └── olist_analysis.ipynb               # Python analysis (EDA + transformations)
+│
+├── sql/
+│   └── olist_analysis.sql                 # SQL queries for KPI analysis
+│
+├── dashboard/
+│   └── olist_dashboard.pbix               # Power BI dashboard (or screenshots)
+│
+├── docs/
+│   └── Olist_Supply_Chain_Analytics.pdf   # Project documentation
+│
+└── README.md                             # Project overview
+
+
+---
+
+## 🔮 Future Enhancements
+
+- Predictive modeling for delivery delays  
+- Real-time pipeline integration  
+- Seller-level performance insights  
+- Customer satisfaction correlation  
+
+---
+
+## 👤 Author
+
+**Ravi Kumar**  
+Business Analyst
