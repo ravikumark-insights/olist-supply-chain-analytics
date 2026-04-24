@@ -175,6 +175,7 @@ Power BI dashboard includes:
 
 ## 📁 Repository Structure
 
+```markdown
 
 olist-supply-chain-analytics/
 │
@@ -194,8 +195,6 @@ olist-supply-chain-analytics/
 │   └── Olist_Supply_Chain_Analytics.pdf   # Project documentation
 │
 └── README.md                             # Project overview
-
-```text
 
 ## 🔮 Future Enhancements
 
